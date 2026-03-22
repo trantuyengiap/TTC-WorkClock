@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+node_modules/
+dist/
+coverage/
+.pytest_cache/
+.mypy_cache/
+.vscode/
+backend/.pytest_cache/
+backend/.coverage
+frontend/.vite/
