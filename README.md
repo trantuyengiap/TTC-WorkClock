@@ -81,5 +81,6 @@ pytest
 - Vận hành: `docs/operations.md`
 - Checklist test: `docs/test-checklist.md`
 - Deploy Debian 12: `deploy/debian12.md`
+- Script cài Debian 12 không Docker: `install-ttc-workclok.sh`
 - Dev trên Windows: `docs/windows-dev.md`
 
