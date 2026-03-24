@@ -1,0 +1,18 @@
+[Unit]
+Description=TTC WorkClock Celery Beat
+After=network.target postgresql.service redis-server.service ttc-workclock-worker.service
+Wants=postgresql.service redis-server.service
+
+[Service]
+Type=simple
+User=ttc-workclock
+Group=ttc-workclock
+WorkingDirectory=/opt/ttc-workclock/backend
+EnvironmentFile=/opt/ttc-workclock/.env
+Environment=PYTHONPATH=/opt/ttc-workclock/backend
+ExecStart=/opt/ttc-workclock/backend/.venv/bin/celery -A app.services.scheduler.celery_app.celery_app beat --loglevel=info
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
