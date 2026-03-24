@@ -41,7 +41,7 @@ class Settings(BaseSettings):
     smtp_port: int = 1025
     smtp_username: str | None = None
     smtp_password: str | None = None
-    smtp_from: EmailStr = 'noreply@example.local'
+    smtp_from: EmailStr = 'info@ttcdanghuynh.vn'
 
     viber_base_url: str = 'http://localhost:8080'
     viber_send_endpoint: str = '/viber/send'
@@ -49,7 +49,7 @@ class Settings(BaseSettings):
 
     default_admin_username: str = 'admin'
     default_admin_password: str = 'Admin@123'
-    default_admin_email: EmailStr = 'admin@example.com'
+    default_admin_email: EmailStr = 'info@ttcdanghuynh.vn'
 
     @field_validator('backend_cors_origins', mode='before')
     @classmethod
